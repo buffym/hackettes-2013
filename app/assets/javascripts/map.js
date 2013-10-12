@@ -4,8 +4,8 @@ $(document).ready(function() {
         return;
     }
 
-    var width = 600;
-    var height = 400;
+    var width = 700;
+    var height = 600;
 
     var nById = function (d) { return d.n };
 
