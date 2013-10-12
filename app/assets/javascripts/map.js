@@ -120,7 +120,7 @@ $(document).ready(function() {
                   .data(jsondata)
                   .enter()
                   .append("circle")
-                  .attr("r",4/scale)
+                  .attr("r",4)
                   .attr("transform", function(d) {
                     if (d.longitude != null) {
                       return "translate(" + projection_hack([-d.longitude,d.latitude]) + ")";

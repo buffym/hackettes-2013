@@ -10,10 +10,7 @@ $(document).ready(function() {
         orientation: "vertical",
         min: 1800,
         max: 2013,
-        change: timeslider_change,
-        slide: function(event, ui) {
-            $(".slider_wrapper p").html(ui.value);
-        },
+        slide: timeslider_change,
         value: 1910
 
     });
@@ -25,6 +22,7 @@ $(document).ready(function() {
 });
 
 function timeslider_change(evt, ui) {
+    $(".slider_wrapper p").html(ui.value);
     var new_year = ui.value;
 
     if (new_year != hack_current_year) {
@@ -40,7 +38,7 @@ function timeslider_change(evt, ui) {
                     .data(jsondata)
                     .enter()
                     .append("circle")
-                    .attr("r",2)
+                    .attr("r",4/scale)
                     .attr("transform", function(d) {
                         if (d.longitude != null) {
                             return "translate(" + projection_hack([-d.longitude,d.latitude]) + ")";
