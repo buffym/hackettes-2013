@@ -1,6 +1,24 @@
 var svg_hack;
 var projection_hack;
-var zoom;
+var zoom, scale;
+
+$(function() {
+	$("#plus").button({
+		icons: {
+			primary: "ui-icon-zoomin"
+		},
+	test: false
+	});
+});
+
+$(function() {
+	$("#minus").button({
+		icons: {
+			primary: "ui-icon-zoomout"
+		},
+	test: false
+	});
+});
 
 $(document).ready(function() {
 
@@ -19,7 +37,6 @@ $(document).ready(function() {
 
     zoom = d3.behavior.zoom().on("zoom", redraw);
     
-
     svg_hack = d3.select("#map").append("svg")
         .attr("width", width)
         .attr("height", height)
@@ -31,7 +48,7 @@ $(document).ready(function() {
 
     function redraw() {
 	
-	  var scale = d3.event.scale;
+	  scale = d3.event.scale;
       svg_hack.attr("transform","translate(" + d3.event.translate + ")"+ " scale(" + d3.event.scale + ")");
 	  
 	  //var scale = d3.event.scale;
@@ -94,11 +111,16 @@ $(document).ready(function() {
 
                 d3.json('/photos.json?has_location=true&year=1910',
                 function (jsondata) {
-                  svg_hack.selectAll("circles.points")
+				
+				if (typeof scale === 'undefined') {
+					scale = 2;
+				}
+				
+				svg_hack.selectAll("circles.points")
                   .data(jsondata)
                   .enter()
                   .append("circle")
-                  .attr("r",2)
+                  .attr("r",4/scale)
                   .attr("transform", function(d) {
                     if (d.longitude != null) {
                       return "translate(" + projection_hack([-d.longitude,d.latitude]) + ")";
