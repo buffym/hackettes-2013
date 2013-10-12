@@ -69,6 +69,22 @@ $(document).ready(function() {
                         .style("stroke-width", "1");
                 });
 
+
+                d3.json('/photos.json?has_location=true&year=1927', 
+                function (jsondata) {
+                  svg.selectAll("circles.points")
+                  .data(jsondata)
+                  .enter()
+                  .append("circle")
+                  .attr("r",5)
+                  .attr("transform", function(d) {
+                    if (d.longitude != null) {
+                      return "translate(" + projection([-d.longitude,d.latitude]) + ")";
+                    }
+                  });
+
+                });
+
         });
 
     });
