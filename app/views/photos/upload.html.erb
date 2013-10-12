@@ -5,6 +5,14 @@
       <h1><a href="/"><%= image_tag 'logo.jpg'%></a></h1>
     </div>
 
+    <div id="nav">
+      <ul>
+        <li><%= link_to "Home", "/" %> | </li>
+        <li><%= link_to "Photo Search", "/photos/search" %> | </li>
+        <li class="selected"><%= link_to "Upload a Photo", "/photos/upload" %></li>
+      </ul>
+    </div>
+
     <div id="column" class="small10">
       <img src="/assets/vermontfarmer.jpg" /><BR /><BR />
       82 Year Old Farmer, Waitsfield, VT.  Photo captured in 2002.

@@ -5,6 +5,14 @@
       <h1><a href="/"><%= image_tag 'logo.jpg'%></a></h1>
     </div>
 
+      <div id="nav">
+        <ul>
+          <li><%= link_to "Home", "/" %> | </li>
+          <li class="selected"><%= link_to "Photo Search", "/photos/search" %> | </li>
+          <li><%= link_to "Upload a Photo", "/photos/upload" %></li>
+        </ul>
+      </div>
+
     <div id="search_page">
         <div id="content">
             <div class="slider_wrapper">
@@ -13,13 +21,9 @@
                 </div>
             </div>
 
-            <div id="map">
-				<div id="zoom_wrapper" style = "float: right">
-					<button id = 'plus'></button>
-					<button id = 'minus'></button>
-				</div>
-            </div>
+            <div id="leaf">
 
+            </div>
             <div id="gallery">
                 <h3></h3>
               <div class="thumbs_list">
