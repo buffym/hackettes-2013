@@ -65,5 +65,7 @@ Hackettes2013::Application.routes.draw do
     end
   end
 
+  match 'towns', to: "photos#town_counts"
+
   root :to => 'welcome#index'
 end

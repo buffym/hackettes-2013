@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131011212129) do
+ActiveRecord::Schema.define(:version => 20131012111117) do
 
   create_table "photos", :force => true do |t|
     t.integer  "ls_id"
@@ -44,5 +44,16 @@ ActiveRecord::Schema.define(:version => 20131011212129) do
   add_index "photos", ["title"], :name => "index_photos_on_title"
   add_index "photos", ["town"], :name => "index_photos_on_town"
   add_index "photos", ["year"], :name => "index_photos_on_year"
+
+  create_table "town_counts", :force => true do |t|
+    t.string   "town"
+    t.integer  "count"
+    t.integer  "year"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "town_counts", ["town"], :name => "index_town_counts_on_town"
+  add_index "town_counts", ["year"], :name => "index_town_counts_on_year"
 
 end

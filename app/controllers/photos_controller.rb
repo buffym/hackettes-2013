@@ -77,5 +77,10 @@ class PhotosController < ApplicationController
     @location = 'Winooski'
   end
 
+  def town_counts
+    @town_counts = TownCount.where(town: params[:name])
+    render json: @town_counts
+  end
+
 
 end
