@@ -5,6 +5,14 @@
       <h1><a href="/"><%= image_tag 'logo.jpg'%></a></h1>
     </div>
 
+    <div id="nav">
+      <ul>
+        <li class="selected"><%= link_to "Home Page", "/" %> | </li>
+        <li><%= link_to "Photo Search", "/photos/search" %> | </li>
+        <li><%= link_to "Upload a Photo", "/photos/upload" %></li>
+      </ul>
+    </div>
+
     <div>
       <%= image_tag 'slide1.jpg' %>
     </div>
