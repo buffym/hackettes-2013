@@ -8,12 +8,11 @@ $(document).ready(function() {
 
     $("#time_slider").slider({
         orientation: "vertical",
-        min: 1800,
+        min: 1850,
         max: 2013,
-        change: timeslider_change,
-        slide: function(event, ui) {
-            $(".slider_wrapper p").html(ui.value);
-        },
+        //change: timeslider_change,
+        slide: timeslider_change,
+
         value: 1910
 
     });
