@@ -5,5 +5,19 @@
     <li><span>Taken In:</span> <%= photo.year.to_s %></li>
     <li><span>County:</span> <%= photo.county %></li>
     <li><span>Town:</span> <%= photo.town %></li>
+    <% if photo.year == 1910 %>
+        <li><span>Whiskey Cost Per Gallon: </span>3.50</li>
+        <li><span>Life Expectancy - Males: </span>48</li>
+        <li><span>Life Expectancy - Females: </span>52</li>
+        <li><span>Burlington Population: </span>20,468</li>
+    <% end %>
+    <% if photo.year == 2007 %>
+        <li><span>Whiskey Cost Per Gallon: </span>3.48</li>
+        <li><span>Life Expectancy - Males: </span>78</li>
+        <li><span>Life Expectancy - Females: </span>83</li>
+        <li><span>Burlington Population: </span>42,284</li>
+    <% end %>
   </ul>
+
+
 </div>

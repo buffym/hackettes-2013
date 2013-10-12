@@ -19,6 +19,9 @@ body {
   border-style:solid;
   border-width:thin;
   background-color:white;
+    border-radius: 10px;
+    border: solid 1px darkgrey;
+    padding: 20px;
 
 }
 
@@ -34,6 +37,8 @@ body {
 	}
 	
 #content {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 	min-height:300px;
 
 }
@@ -77,6 +82,10 @@ body {
         position:relative;
 	min-height:300px;	
 }
+
+#search_page {
+    border-radius: 10px;
+}
 	
 #clear {clear:both; }
 
@@ -111,7 +120,9 @@ img {
 h1
 { font-color: grey; 
 font-size:36px; 
-font-family: Verdana, Geneva, sans-serif;}
+font-family: Verdana, Geneva, sans-serif;
+margin-top: 0
+}
 
 .preview {
     background-color: green;
@@ -135,16 +146,26 @@ font-family: Verdana, Geneva, sans-serif;}
 .slider_wrapper {
     float: left;
     height: 600px;
-    margin-left: 50px;
+    margin-left: 37px;
+    text-align: center;
+
+    .year {
+        color: #303030;
+        margin-bottom: 4px;
+        font-family: Arial;
+        font-weight: bold;
+    }
 
     #time_slider {
         height: 536px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-<<<<<<< HEAD
 #simplemodal-overlay {
-    background-color: darkgray;
+    background-color: black;
+    opacity: 0.8;
 }
 
 .modalCloseImg {
@@ -161,13 +182,15 @@ font-family: Verdana, Geneva, sans-serif;}
 
 #detail_view {
 
-    width: 1420px;
+    width: 1260px;
     background-color: white;
+    border-radius: 10px;
+    border: solid 1px darkgrey;
     //padding: 14px;
 
     .photo_box {
         float: left;
-        width: 680px;
+        width: 600px;
         margin: 15px;
 
         h2 {
@@ -195,14 +218,14 @@ font-family: Verdana, Geneva, sans-serif;}
     }
 
     .thumbnail {
-        width: 680px;
-        height: 680px;
-        line-height: 680px;
+        width: 600px;
+        height: 600px;
+        line-height: 600px;
         background-color: #eeeeee;
 
         img {
-            max-width: 680px;
-            max-height: 680px;
+            max-width: 600px;
+            max-height: 600px;
             vertical-align: middle;
         }
     }
@@ -216,4 +239,11 @@ font-family: Verdana, Geneva, sans-serif;}
 }
 input.qtyplus { width:25px; height:25px;}
 input.qtyminus { width:25px; height:25px;}
+
+#time_slider {
+    .ui-slider-handle {
+        background: none repeat-x scroll 50% 50% #303030;
+        border-color: #303030;
+    }
+}
 

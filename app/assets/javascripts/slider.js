@@ -10,7 +10,11 @@ $(document).ready(function() {
         orientation: "vertical",
         min: 1800,
         max: 2013,
-        change: timeslider_change
+        change: timeslider_change,
+        slide: function(event, ui) {
+            $(".slider_wrapper p").html(ui.value);
+        },
+        value: 1910
 
     });
 
@@ -24,6 +28,8 @@ function timeslider_change(evt, ui) {
     var new_year = ui.value;
 
     if (new_year != hack_current_year) {
+
+        $(".slider_wrapper p").html(new_year);
         hack_current_year = new_year;
         // update the map
         svg_hack.selectAll("circle").remove();
@@ -34,7 +40,7 @@ function timeslider_change(evt, ui) {
                     .data(jsondata)
                     .enter()
                     .append("circle")
-                    .attr("r",5)
+                    .attr("r",2)
                     .attr("transform", function(d) {
                         if (d.longitude != null) {
                             return "translate(" + projection_hack([-d.longitude,d.latitude]) + ")";

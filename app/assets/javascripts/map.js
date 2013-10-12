@@ -86,13 +86,13 @@ $(document).ready(function() {
                 .attr("class", function (d) { return quantile(nById(d.properties));});
 
 
-                d3.json('/photos.json?has_location=true',
+                d3.json('/photos.json?has_location=true&year=1910',
                 function (jsondata) {
                   svg_hack.selectAll("circles.points")
                   .data(jsondata)
                   .enter()
                   .append("circle")
-                  .attr("r",5)
+                  .attr("r",2)
                   .attr("transform", function(d) {
                     if (d.longitude != null) {
                       return "translate(" + projection_hack([-d.longitude,d.latitude]) + ")";
