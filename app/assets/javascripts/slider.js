@@ -19,9 +19,6 @@ $(document).ready(function() {
 function timeslider_change(evt, ui) {
     var new_year = ui.value;
 
-    alert('hi sarah!');
-
-
     if (new_year != hack_current_year) {
         hack_current_year = new_year;
         // update the map

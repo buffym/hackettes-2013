@@ -22,11 +22,11 @@ $(document).ready(function() {
 		.call(d3.behavior.zoom().on("zoom", redraw))
 		.append('svg:g');
 		
-	svg.attr("transform", "scale( " + 3 + ")");
+	svg_hack.attr("transform", "scale( " + 1 + ")");
 
 	function redraw() {
 	console.log("here", d3.event.translate, d3.event.scale);
-	svg.attr("transform",
+	svg_hack.attr("transform",
 		"translate(" + d3.event.translate + ")"
 		+ " scale(" + d3.event.scale + ")");
 	}
