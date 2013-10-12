@@ -54,7 +54,6 @@ $(document).ready(function() {
 	  //var scale = d3.event.scale;
 	  
 	  zoom.center;
-	  
 	  d3.selectAll("circle")
 		.attr("r", 4/scale);
 	   
@@ -74,8 +73,11 @@ $(document).ready(function() {
 	
 	d3.csv("/assets/counts.csv", function (data) {
 
+
         d3.json("/assets/vt.json", function(error, vt) {
 
+	d3.json("/assets/towns.json", function (towns) {
+            console.log(towns);
             data.map(function (d) {
                 return { id: d.CtyID, county: d.CtyName, town: d.townName, n: +d.n };
             });
@@ -111,16 +113,14 @@ $(document).ready(function() {
 
                 d3.json('/photos.json?has_location=true&year=1910',
                 function (jsondata) {
-				
 				if (typeof scale === 'undefined') {
-					scale = 2;
+					scale = 1;
 				}
-				
 				svg_hack.selectAll("circles.points")
                   .data(jsondata)
                   .enter()
                   .append("circle")
-                  .attr("r",4)
+                  .attr("r",4/scale)
                   .attr("transform", function(d) {
                     if (d.longitude != null) {
                       return "translate(" + projection_hack([-d.longitude,d.latitude]) + ")";
@@ -131,6 +131,7 @@ $(document).ready(function() {
                       });
 
                 });
+            });
 
         });
 
