@@ -59,6 +59,10 @@ class PhotosController < ApplicationController
 
   end
 
+  def thanks
+
+  end
+
   def search
     @location = 'Winooski'
   end

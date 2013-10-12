@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     $("#time_slider").slider({
         orientation: "vertical",
-        min: 1800,
+        min: 1850,
         max: 2013,
         slide: timeslider_change,
         value: 1910
