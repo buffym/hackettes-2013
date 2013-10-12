@@ -76,8 +76,6 @@ $(document).ready(function() {
 
         d3.json("/assets/vt.json", function(error, vt) {
 
-	d3.json("/assets/towns.json", function (towns) {
-            console.log(towns);
             data.map(function (d) {
                 return { id: d.CtyID, county: d.CtyName, town: d.townName, n: +d.n };
             });
@@ -131,7 +129,6 @@ $(document).ready(function() {
                       });
 
                 });
-            });
 
         });
 
