@@ -83,7 +83,9 @@ $(document).ready(function() {
                 .data(topojson.feature(vt, vt.objects.vt_towns).features)
                 .enter().append("path")
                 .attr("d", path)
-                .attr("class", function (d) { return quantile(nById(d.properties));});
+                .attr("class", function (d) { return quantile(nById(d.properties));}).attr("title", function(d) {
+                    return d.properties.TOWNNAME;
+                });
 
 
                 d3.json('/photos.json?has_location=true&year=1910',

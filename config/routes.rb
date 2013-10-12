@@ -59,6 +59,9 @@ Hackettes2013::Application.routes.draw do
   resources :photos, :only => [ :index, :show ] do
     collection do
       get 'search', action: 'search'
+      get 'upload', action: 'upload'
+      post 'upload', action: 'create'
+      get 'thank-you', action: 'thanks'
     end
   end
 
