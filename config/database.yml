@@ -1,0 +1,5 @@
+development:
+  adapter: mysql2
+  database: hackvt
+  username: test
+  password: finance
