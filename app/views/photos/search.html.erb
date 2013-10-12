@@ -1,0 +1,66 @@
+<div id="wrapper">
+
+  <div id="container">
+
+    <div id="header">
+      <h1>Explore Historic Vermont</h1>
+    </div>
+
+    <div id="body">
+      <div id="content">
+        <div id="float-searchleft">
+          <span class="title"><a href="/">Home</a> > Search</span>
+          <BR /><BR />
+          <span class="search-title">Search By Current Location</span><BR />
+          <span class="search-title">Search By Zip Code</span> <BR />
+          <span class="search-title">Search By County</span>
+        </div>
+        <div id="map">
+          <p><img src="/assets/map.jpg" />
+          </p>
+          <p>This is a test</p>
+          </div>
+        </div>
+      </div>
+
+          <div id="footer">
+
+            <div class="float2">
+              <p><span class="title">Your Location</span></p>
+              <% random_previews.each do |photo| %>
+                  <div class="preview">
+                <%= image_tag photo.url %>
+                  </div>
+              <% end %>
+              <%= link_to "View All Photos in Your Area", "#" %>
+            </div>
+
+            <div class="float2">
+              <p><span class="title">Data Preview</span></p>
+              <div class="left"><img src="/assets/lrgthumbnail.jpg" /><BR />
+                <div class="left small10" class="small10">
+                  City: Burlington<BR />
+                  County: Chittenden<br />
+                  State: Vermont<BR />
+                  Photo Taken: 1950<BR />
+                </div>
+              </div>
+
+              <div class="left"><img src="/assets/lrgthumbnail.jpg" /><BR /></div>
+              <div class="left small10">
+                City: Burlington<BR />
+                County: Chittenden<br />
+                State: Vermont<BR />
+                Photo Taken: 1950<BR />
+              </div>
+            </div>
+            <br style="clear:both">
+
+
+
+          </div> <!-- end footer -->
+
+        </div> <!-- end container -->
+
+      </div> <!-- end wrapper -->
+    </div>
