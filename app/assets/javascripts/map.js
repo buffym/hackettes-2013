@@ -1,5 +1,6 @@
 var svg_hack;
 var projection_hack;
+var zoom;
 
 $(document).ready(function() {
 
@@ -16,21 +17,25 @@ $(document).ready(function() {
         .domain([0, 150, 250, 350, 6000])
         .range(d3.range(5).map(function(i) { return "q" + i + "-5";}));
 
+    zoom = d3.behavior.zoom().on("zoom", redraw);
+    
+
     svg_hack = d3.select("#map").append("svg")
         .attr("width", width)
         .attr("height", height)
-		.call(d3.behavior.zoom().on("zoom", redraw))
+		.call(zoom)
 		.append('svg:g');
 		
 	svg_hack.attr("transform", "scale( " + 1.03383283565496 + ")");
 
-	function redraw() {
-	console.log("here", d3.event.translate, d3.event.scale);
-	svg_hack.attr("transform",
-		"translate(" + d3.event.translate + ")"
-		+ " scale(" + d3.event.scale + ")");
-	}
 
+    function redraw() {
+      console.log(d3.event);
+      console.log("here", d3.event.translate, d3.event.scale);
+      svg_hack.attr("transform",
+	  "translate(" + d3.event.translate + ")"
+	  + " scale(" + d3.event.scale + ")");
+   }
 
     projection_hack = d3.geo.transverseMercator()
         .rotate([73.211914, -44.481565])
