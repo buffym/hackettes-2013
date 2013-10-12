@@ -1,0 +1,7 @@
+<div id="detail_view">
+  <%= render 'photo_box', photo: @photo %>
+  <% if @photo.child %>
+  <%= render 'photo_box', photo: @photo.child %>
+  <% end %>
+  <br style="clear:both"/>
+</div>

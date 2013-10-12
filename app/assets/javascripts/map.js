@@ -22,7 +22,7 @@ $(document).ready(function() {
 		.call(d3.behavior.zoom().on("zoom", redraw))
 		.append('svg:g');
 		
-	svg_hack.attr("transform", "scale( " + 1 + ")");
+	svg_hack.attr("transform", "scale( " + 1.03383283565496 + ")");
 
 	function redraw() {
 	console.log("here", d3.event.translate, d3.event.scale);
@@ -92,7 +92,10 @@ $(document).ready(function() {
                     if (d.longitude != null) {
                       return "translate(" + projection_hack([-d.longitude,d.latitude]) + ")";
                     }
-                  });
+                  })
+                  .attr("data-photo-id", function(d) {
+                          return d.id;
+                      });
 
                 });
 

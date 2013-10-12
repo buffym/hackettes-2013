@@ -1,0 +1,9 @@
+<div class="photo_box">
+  <div class="thumbnail"><%= image_tag photo.url %></div>
+  <h2><%= photo.title %></h2>
+  <ul>
+    <li><span>Taken In:</span> <%= photo.year.to_s %></li>
+    <li><span>County:</span> <%= photo.county %></li>
+    <li><span>Town:</span> <%= photo.town %></li>
+  </ul>
+</div>

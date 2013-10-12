@@ -49,6 +49,7 @@ class PhotosController < ApplicationController
     @photo = Photo.find(params[:id])
 
     respond_to do |format|
+      format.js
       format.json { render json: @photo }
       format.html { render }
     end

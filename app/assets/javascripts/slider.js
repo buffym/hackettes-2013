@@ -14,6 +14,10 @@ $(document).ready(function() {
 
     });
 
+    $(document).on('click', 'circle', function() {
+        var circle = $(this);
+        $.ajax('/photos/' + circle.attr('data-photo-id') + '.js');
+    });
 });
 
 function timeslider_change(evt, ui) {
@@ -35,9 +39,24 @@ function timeslider_change(evt, ui) {
                         if (d.longitude != null) {
                             return "translate(" + projection_hack([-d.longitude,d.latitude]) + ")";
                         }
+                    })
+                    .attr("data-photo-id", function(d) {
+                       return d.id;
                     });
-
             });
 
+    }
+}
+
+function open_modal_txt(text, dont_show_close) {
+    $.modal.close();
+    if (dont_show_close === 'undefined')  {
+        dont_show_close = false;
+    }
+    if (dont_show_close) {
+        $.modal(text, { opacity: 90, close: false, focus: false });
+    }
+    else {
+        $.modal(text, { opacity: 90, focus: false });
     }
 }
