@@ -1,3 +1,6 @@
+var svg_hack;
+var projection_hack;
+
 $(document).ready(function() {
 
     if ($("#search_page").length == 0) {
@@ -13,16 +16,16 @@ $(document).ready(function() {
         .domain([1, 4192])
         .range(d3.range(9).map(function(i) { return "q" + i + "-9";}));
 
-    var svg = d3.select("#map").append("svg")
+    svg_hack = d3.select("#map").append("svg")
         .attr("width", width)
         .attr("height", height);
 
-    var projection = d3.geo.transverseMercator()
+    projection_hack = d3.geo.transverseMercator()
         .rotate([72.5623, -44.2035])
         .translate([width / 3, height / 3])
         .scale([13500]);
 
-    var path = d3.geo.path().projection(projection);
+    var path = d3.geo.path().projection(projection_hack);
 
     d3.csv("/assets/counts.csv", function (data) {
 
@@ -49,11 +52,11 @@ $(document).ready(function() {
 
             var vermont = topojson.feature(vt, vt.objects.vt_towns);
 
-            svg.append("path")
+            svg_hack.append("path")
                 .datum(vermont)
                 .attr("d", path);
 
-            svg.selectAll(".county")
+            svg_hack.selectAll(".county")
                 .data(topojson.feature(vt, vt.objects.vt_towns).features)
                 .enter().append("path")
                 .attr("d", path)
@@ -70,16 +73,16 @@ $(document).ready(function() {
                 });
 
 
-                d3.json('/photos.json?has_location=true&year=1927', 
+                d3.json('/photos.json?has_location=true',
                 function (jsondata) {
-                  svg.selectAll("circles.points")
+                  svg_hack.selectAll("circles.points")
                   .data(jsondata)
                   .enter()
                   .append("circle")
                   .attr("r",5)
                   .attr("transform", function(d) {
                     if (d.longitude != null) {
-                      return "translate(" + projection([-d.longitude,d.latitude]) + ")";
+                      return "translate(" + projection_hack([-d.longitude,d.latitude]) + ")";
                     }
                   });
 
