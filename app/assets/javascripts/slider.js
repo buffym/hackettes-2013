@@ -10,19 +10,27 @@ $(document).ready(function() {
         orientation: "vertical",
         min: 1850,
         max: 2013,
-        slide: timeslider_change,
+        change: timeslider_change,
         value: 1910
-
     });
 
     $(document).on('click', 'circle', function() {
         var circle = $(this);
         $.ajax('/photos/' + circle.attr('data-photo-id') + '.js');
     });
+
+    $(document).on('click', '.gallery_thumb', function() {
+        var circle = $(this);
+        $.ajax('/photos/' + circle.attr('data-photo-id') + '.js');
+    });
 });
 
 function timeslider_change(evt, ui) {
-    $(".slider_wrapper p").html(ui.value);
+
+    $("#gallery h3").html("");
+    $("#gallery .thumb_list").html("");
+
+
     var new_year = ui.value;
 
     if (new_year != hack_current_year) {
@@ -63,4 +71,20 @@ function open_modal_txt(text, dont_show_close) {
     else {
         $.modal(text, { opacity: 90, focus: false });
     }
+}
+
+function get_town_data(town) {
+
+    $("#gallery h3").html(town);
+    $("#gallery .thumbs_list").html("");
+    $.ajax("/photos.json?has_location=false&year=" + $("p.year").html() + "&town=" + town, {
+        dataType: 'json',
+        success: function(data) {
+            var i;
+            for (i =0; i < data.length; i++) {
+                var photo = data[i];
+                $("#gallery .thumbs_list").append("<div class='gallery_thumb' style=\"background-image: url('" + photo.url + "')\" data-photo-id='" + photo.id + "'></div>");
+            }
+        }
+    });
 }

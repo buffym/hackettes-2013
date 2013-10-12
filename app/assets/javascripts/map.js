@@ -43,7 +43,7 @@ $(document).ready(function() {
 		.call(zoom)
 		.append('svg:g');
 		
-	svg_hack.attr("transform", "scale( " + 1.03383283565496 + ")");
+	svg_hack.attr("transform", "scale( " + 2.7588927144969175 + ")");
 
 
     function redraw() {
@@ -107,6 +107,9 @@ $(document).ready(function() {
                 .attr("d", path)
                 .attr("class", function (d) { return quantile(nById(d.properties));}).attr("title", function(d) {
                     return d.properties.TOWNNAME;
+                })
+                .on('click', function(d) {
+                    get_town_data(d.properties.TOWNNAME);
                 });
 
                 d3.json('/photos.json?has_location=true&year=1910',

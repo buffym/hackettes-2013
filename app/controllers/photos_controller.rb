@@ -5,7 +5,13 @@ class PhotosController < ApplicationController
     conditions = []
 
     unless params[:year].blank?
-      conditions << { year: params[:year]}
+      years = params[:year].split('-', 2)
+      if years.length > 1
+        conditions << "year >= #{Photo.sanitize(years[0])}"
+        conditions << "year <= #{Photo.sanitize(years[1])}"
+      else
+        conditions << { year: params[:year]}
+      end
     end
 
     unless params[:town].blank?
@@ -41,6 +47,10 @@ class PhotosController < ApplicationController
     end
 
     @photos = @photos.order(sort + ' ' + order)
+
+    if params[:page]
+      @photos = @photos.page(params[:page]).per(100)
+    end
 
     render json: @photos
   end
