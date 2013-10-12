@@ -55,6 +55,10 @@ class PhotosController < ApplicationController
     end
   end
 
+  def upload
+
+  end
+
   def search
     @location = 'Winooski'
   end
