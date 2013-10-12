@@ -30,11 +30,17 @@ $(document).ready(function() {
 
 
     function redraw() {
-      console.log(d3.event);
-      console.log("here", d3.event.translate, d3.event.scale);
-      svg_hack.attr("transform",
-	  "translate(" + d3.event.translate + ")"
-	  + " scale(" + d3.event.scale + ")");
+	
+	  var scale = d3.event.scale;
+      svg_hack.attr("transform","translate(" + d3.event.translate + ")"+ " scale(" + d3.event.scale + ")");
+	  
+	  //var scale = d3.event.scale;
+	  
+	  zoom.center;
+	  
+	  d3.selectAll("circle")
+		.attr("r", 4/scale);
+	   
    }
 
     projection_hack = d3.geo.transverseMercator()
@@ -74,7 +80,6 @@ $(document).ready(function() {
 
 			var vermont = topojson.feature(vt, vt.objects.vt_towns);
 
-
 			svg_hack.append("path")
                 .datum(vermont)
                 .attr("d", path);
@@ -84,7 +89,6 @@ $(document).ready(function() {
                 .enter().append("path")
                 .attr("d", path)
                 .attr("class", function (d) { return quantile(nById(d.properties));});
-
 
                 d3.json('/photos.json?has_location=true&year=1910',
                 function (jsondata) {
