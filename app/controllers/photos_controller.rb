@@ -42,8 +42,6 @@ class PhotosController < ApplicationController
 
     @photos = @photos.order(sort + ' ' + order)
 
-    @photos = @photos.page(params[:page]).per(100)
-
     render json: @photos
   end
 
