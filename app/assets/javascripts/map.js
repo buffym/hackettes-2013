@@ -2,6 +2,24 @@ var svg_hack;
 var projection_hack;
 var zoom, scale;
 
+$(function() {
+	$("#plus").button({
+		icons: {
+			primary: "ui-icon-zoomin"
+		},
+	test: false
+	});
+});
+
+$(function() {
+	$("#minus").button({
+		icons: {
+			primary: "ui-icon-zoomout"
+		},
+	test: false
+	});
+});
+
 $(document).ready(function() {
 
     if ($("#search_page").length == 0) {
