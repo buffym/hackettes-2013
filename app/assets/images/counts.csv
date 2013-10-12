@@ -1,0 +1,253 @@
+ctyID,ctyName,townName,n
+1,Addison,Addison,264
+1,Addison,Bridport,20
+1,Addison,Bristol,797
+1,Addison,Cornwall,65
+1,Addison,Ferrisburg,388
+1,Addison,Goshen,22
+1,Addison,Granville,58
+1,Addison,Hancock,54
+1,Addison,Leicester,54
+1,Addison,Lincoln,214
+1,Addison,Middlebury,2364
+1,Addison,Monkton,43
+1,Addison,New Haven,276
+1,Addison,Orwell,105
+1,Addison,Panton,12
+1,Addison,Ripton,159
+1,Addison,Salisbury,328
+1,Addison,Shoreham,120
+1,Addison,Starksboro,84
+1,Addison,Vergennes,366
+1,Addison,Waltham,84
+1,Addison,Weybridge,61
+1,Addison,Whiting,16
+3,Bennington,Arlington,152
+3,Bennington,Bennington,2609
+3,Bennington,Dorset,208
+3,Bennington,Glastenbury,12
+3,Bennington,Landgrove,3
+3,Bennington,Manchester,282
+3,Bennington,Peru,34
+3,Bennington,Pownal,238
+3,Bennington,Readsboro,217
+3,Bennington,Rupert,14
+3,Bennington,Sandgate,27
+3,Bennington,Searsburg,65
+3,Bennington,Shaftsbury,42
+3,Bennington,Stamford,70
+3,Bennington,Sunderland,97
+3,Bennington,Winhall,27
+3,Bennington,Woodford,154
+5,Caledonia,Barnet,1758
+5,Caledonia,Burke,170
+5,Caledonia,Cabot,1
+5,Caledonia,Danville,256
+5,Caledonia,Groton,89
+5,Caledonia,Hardwick,169
+5,Caledonia,Kirby,1
+5,Caledonia,Lyndon,945
+5,Caledonia,Newark,7
+5,Caledonia,Peacham,319
+5,Caledonia,Ryegate,343
+5,Caledonia,Sheffield,26
+5,Caledonia,St. Johnsbury,1100
+5,Caledonia,Stannard,4
+5,Caledonia,Sutton,32
+5,Caledonia,Walden,48
+5,Caledonia,Waterford,89
+5,Caledonia,Wheelock,26
+7,Chittenden,Bolton,703
+7,Chittenden,Buels Gore,35
+7,Chittenden,Burlington,4192
+7,Chittenden,Charlotte,212
+7,Chittenden,Colchester,853
+7,Chittenden,Essex,242
+7,Chittenden,Hinesburg,47
+7,Chittenden,Huntington,190
+7,Chittenden,Jericho,91
+7,Chittenden,Milton,1440
+7,Chittenden,Richmond,540
+7,Chittenden,Shelburne,943
+7,Chittenden,South Burlington,680
+7,Chittenden,St George,5
+7,Chittenden,Underhill,266
+7,Chittenden,Westford,28
+7,Chittenden,Williston,821
+7,Chittenden,Winooski,581
+9,Essex,Averill,10
+9,Essex,Averys Gore,1
+9,Essex,Bloomfield,16
+9,Essex,Brighton,140
+9,Essex,Brunswick,11
+9,Essex,Canaan,56
+9,Essex,Concord,63
+9,Essex,East Haven,8
+9,Essex,Ferdinand,3
+9,Essex,Granby,4
+9,Essex,Guildhall,30
+9,Essex,Lemington,154
+9,Essex,Lewis,1
+9,Essex,Lunenburg,28
+9,Essex,Maidstone,37
+9,Essex,Norton,39
+9,Essex,Victory,32
+9,Essex,Warners Grant,2
+9,Essex,Wilmington,2
+11,Franklin,Bakersfield,23
+11,Franklin,Berkshire,80
+11,Franklin,Enosburg,83
+11,Franklin,Fairfax,107
+11,Franklin,Fairfield,87
+11,Franklin,Fletcher,33
+11,Franklin,Franklin,67
+11,Franklin,Georgia,239
+11,Franklin,Highgate,404
+11,Franklin,Montgomery,65
+11,Franklin,Richford,78
+11,Franklin,Sheldon,112
+11,Franklin,St. Albans,1083
+11,Franklin,Swanton,250
+13,Grand Isle,Alburg,206
+13,Grand Isle,Grand Isle,129
+13,Grand Isle,Isle La Motte,100
+13,Grand Isle,North Hero,73
+13,Grand Isle,South Hero,196
+15,Lamoille,Belvidere,55
+15,Lamoille,Cambridge,410
+15,Lamoille,Eden,90
+15,Lamoille,Elmore,60
+15,Lamoille,Hyde Park,51
+15,Lamoille,Johnson,109
+15,Lamoille,Morristown,286
+15,Lamoille,Stowe,1710
+15,Lamoille,Waterville,35
+15,Lamoille,Wolcott,81
+17,Orange,Bradford,785
+17,Orange,Braintree,46
+17,Orange,Brookfield,447
+17,Orange,Chelsea,33
+17,Orange,Corinth,65
+17,Orange,Fairlee,570
+17,Orange,Newbury,278
+17,Orange,Orange,58
+17,Orange,Randolph,420
+17,Orange,Strafford,78
+17,Orange,Thetford,531
+17,Orange,Topsham,35
+17,Orange,Tunbridge,111
+17,Orange,Vershire,193
+17,Orange,Washington,25
+17,Orange,West Fairlee,129
+17,Orange,Williamstown,176
+19,Orleans,Albany,9
+19,Orleans,Barton,667
+19,Orleans,Brownington,13
+19,Orleans,Charleston,52
+19,Orleans,Coventry,114
+19,Orleans,Craftsbury,67
+19,Orleans,Derby,495
+19,Orleans,Glover,25
+19,Orleans,Greensboro,450
+19,Orleans,Holland,2
+19,Orleans,Irasburg,181
+19,Orleans,Jay,46
+19,Orleans,Lowell,72
+19,Orleans,Morgan,11
+19,Orleans,Newport,448
+19,Orleans,Troy,66
+19,Orleans,Westfield,41
+19,Orleans,Westmore,145
+21,Rutland,Benson,13
+21,Rutland,Brandon,315
+21,Rutland,Castleton,513
+21,Rutland,Chittenden,33
+21,Rutland,Clarendon,244
+21,Rutland,Danby,120
+21,Rutland,Fair Haven,585
+21,Rutland,Hubbardton,59
+21,Rutland,Ira,10
+21,Rutland,Killington,412
+21,Rutland,Mendon,66
+21,Rutland,Middletown Springs,24
+21,Rutland,Mount Holly,67
+21,Rutland,Mount Tabor,18
+21,Rutland,Pawlet,58
+21,Rutland,Pittsfield,41
+21,Rutland,Pittsford,378
+21,Rutland,Poultney,62
+21,Rutland,Proctor,599
+21,Rutland,Rutland,926
+21,Rutland,Shrewsbury,72
+21,Rutland,Sudbury,48
+21,Rutland,Tinmouth,10
+21,Rutland,Wallingford,351
+21,Rutland,Wells,21
+21,Rutland,West Haven,31
+21,Rutland,West Rutland,318
+23,Washington,Barre,834
+23,Washington,Berlin,1734
+23,Washington,Cabot,60
+23,Washington,Calais,82
+23,Washington,Duxbury,157
+23,Washington,East Montpelier,153
+23,Washington,Fayston,100
+23,Washington,Marshfield,145
+23,Washington,Middlesex,552
+23,Washington,Montpelier,3001
+23,Washington,Moretown,203
+23,Washington,Northfield,620
+23,Washington,Plainfield,110
+23,Washington,Roxbury,89
+23,Washington,Waitsfield,120
+23,Washington,Warren,178
+23,Washington,Waterbury,803
+23,Washington,Woodbury,25
+23,Washington,Worcester,126
+25,Windham,Athens,5
+25,Windham,Brattleboro,1043
+25,Windham,Brookline,3
+25,Windham,Dover,43
+25,Windham,Dummerston,192
+25,Windham,Grafton,44
+25,Windham,Guilford,199
+25,Windham,Halifax,10
+25,Windham,Jamaica,70
+25,Windham,Londonderry,101
+25,Windham,Marlboro,196
+25,Windham,Newfane,54
+25,Windham,Putney,210
+25,Windham,Rockingham,568
+25,Windham,Somerset,3
+25,Windham,Stratton,18
+25,Windham,Townshend,36
+25,Windham,Vernon,37
+25,Windham,Wardsboro,33
+25,Windham,Westminster,250
+25,Windham,Whitingham,57
+25,Windham,Wilmington,100
+25,Windham,Windham,27
+27,Windsor,Andover,34
+27,Windsor,Baltimore,3
+27,Windsor,Barnard,28
+27,Windsor,Bethel,285
+27,Windsor,Bridgewater,264
+27,Windsor,Cavendish,173
+27,Windsor,Chester,262
+27,Windsor,Hartford,2746
+27,Windsor,Hartland,293
+27,Windsor,Ludlow,288
+27,Windsor,Norwich,465
+27,Windsor,Plymouth,220
+27,Windsor,Pomfret,41
+27,Windsor,Reading,21
+27,Windsor,Rochester,79
+27,Windsor,Royalton,668
+27,Windsor,Sharon,421
+27,Windsor,Springfield,632
+27,Windsor,Stockbridge,246
+27,Windsor,Weathersfield,383
+27,Windsor,West Windsor,31
+27,Windsor,Weston,118
+27,Windsor,Windsor,360
+27,Windsor,Woodstock,408
