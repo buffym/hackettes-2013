@@ -1,12 +1,8 @@
-.q0-9{fill:rgb(247,252,245)}
-.q1-9{fill:rgb(229,245,224)}
-.q2-9{fill:rgb(199,233,192)}
-.q3-9{fill:rgb(161,217,155)}
-.q4-9{fill:rgb(116,196,118)}
-.q5-9{fill:rgb(65,171,93)}
-.q6-9{fill:rgb(35,139,69)}
-.q7-9{fill:rgb(0,109,44)}
-.q8-9{fill:rgb(0,68,27)}
+.q0-5{fill:rgb(237,248,233)}
+.q1-5{fill:rgb(186,228,179)}
+.q2-5{fill:rgb(116,196,118)}
+.q3-5{fill:rgb(49,163,84)}
+.q4-5{fill:rgb(0,109,44)}
 
 .towns {
 	fill: none;
@@ -20,6 +16,6 @@
 
 path {
 	stroke: black;
-	stroke-width: 1px;
+	stroke-width: .5px;
 	shape-rendering: cripsEdges
 }

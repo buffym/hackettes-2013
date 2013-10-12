@@ -9,22 +9,38 @@ $(document).ready(function() {
 
     var nById = function (d) { return d.n };
 
-    var quantize = d3.scale.quantize()
-        .domain([1, 4192])
-        .range(d3.range(9).map(function(i) { return "q" + i + "-9";}));
+    var quantile = d3.scale.threshold()
+        .domain([0, 150, 250, 350, 6000])
+        .range(d3.range(5).map(function(i) { return "q" + i + "-5";}));
 
     var svg = d3.select("#map").append("svg")
         .attr("width", width)
-        .attr("height", height);
+        .attr("height", height)
+		.call(d3.behavior.zoom().on("zoom", redraw))
+		.append('svg:g');
+		
+	svg.attr("transform", "scale( " + 3 + ")");
+
+	function redraw() {
+	console.log("here", d3.event.translate, d3.event.scale);
+	svg.attr("transform",
+		"translate(" + d3.event.translate + ")"
+		+ " scale(" + d3.event.scale + ")");
+	}
 
     var projection = d3.geo.transverseMercator()
-        .rotate([72.5623, -44.2035])
-        .translate([width / 3, height / 3])
+        .rotate([73.211914, -44.481565])
+        .translate([width / 10, height / 4])
         .scale([13500]);
 
     var path = d3.geo.path().projection(projection);
 
-    d3.csv("/assets/counts.csv", function (data) {
+    var tooltip = d3.select("body").append("div")
+  	  .attr("class", "tooltip")
+  	  .style("opacity", 1e-6)
+  	  .style("background", "rgba(250,250,250,.7)");
+	
+	d3.csv("/assets/counts.csv", function (data) {
 
         d3.json("/assets/vt.json", function(error, vt) {
 
@@ -47,9 +63,9 @@ $(document).ready(function() {
                 };
             };
 
-            var vermont = topojson.feature(vt, vt.objects.vt_towns);
+			var vermont = topojson.feature(vt, vt.objects.vt_towns);
 
-            svg.append("path")
+			svg.append("path")
                 .datum(vermont)
                 .attr("d", path);
 
@@ -57,17 +73,7 @@ $(document).ready(function() {
                 .data(topojson.feature(vt, vt.objects.vt_towns).features)
                 .enter().append("path")
                 .attr("d", path)
-                .attr("class", function (d) { return quantize(nById(d.properties));})
-                .on("mouseover", function(d, i) {
-                    d3.select(this.parentNode.appendChild(this)).transition().duration(300)
-                        .style("stroke", "black")
-                        .style("stroke-width", "7");
-                })
-                .on("mouseout", function(d,i) {
-                    d3.select(this.parentNode.appendChild(this)).transition().duration(300)
-                        .style("stroke", "black")
-                        .style("stroke-width", "1");
-                });
+                .attr("class", function (d) { return quantile(nById(d.properties));});
 
 
                 d3.json('/photos.json?has_location=true&year=1927', 
